@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_quran"
+        android:icon="@drawable/ic_quran"
+        android:title="Quran" />
+    <item
+        android:id="@+id/tab_hadis"
+        android:icon="@drawable/ic_book"
+        android:title="Hadis" />
+    <item
+        android:id="@+id/tab_namaz"
+        android:icon="@drawable/ic_namaz"
+        android:title="Prayer time" />
+    <item
+        android:id="@+id/tab_qibla"
+        android:icon="@drawable/ic_qibla"
+        android:title="Qibla Direction"/>
+</menu>
