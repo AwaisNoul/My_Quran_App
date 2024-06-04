@@ -6,9 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.disc.myquranapp.MainActivity
-import com.disc.myquranapp.R
-import com.disc.myquranapp.activitys.QuranBySurahActivity
+import com.disc.myquranapp.activitys.quran.QuranBySurahActivity
 import com.disc.myquranapp.databinding.FragmentNamazBinding
 
 class QuranFragment : Fragment() {

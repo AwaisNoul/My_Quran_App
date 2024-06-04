@@ -5,6 +5,16 @@ plugins {
 }
 
 android {
+
+    signingConfigs {
+        create("release") {
+            storeFile = file("D:\\kuliah\\piranti\\quran_finder.jks")
+            storePassword = "quranfinder098"
+            keyAlias = "key0"
+            keyPassword = "quranfinder098"
+        }
+    }
+
     namespace = "com.disc.myquranapp"
     compileSdk = 34
 

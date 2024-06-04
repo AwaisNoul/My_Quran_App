@@ -1,15 +1,12 @@
-package com.disc.myquranapp.activitys
+package com.disc.myquranapp.activitys.quran
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.disc.myquranapp.R
-import com.disc.myquranapp.SurahActivity
 import com.disc.myquranapp.Utils
+import com.disc.myquranapp.activitys.SurahActivity
 import com.disc.myquranapp.databinding.ActivityQuranBySurahBinding
 import com.disc.myquranapp.databinding.SurahListItemBinding
 import com.disc.myquranapp.model.Data
@@ -51,7 +48,7 @@ class QuranBySurahActivity : AppCompatActivity() {
     }
 
 
-    inline fun <reified T> parseJsonToList(resourceId: Int): List<T> {
+    private inline fun <reified T> parseJsonToList(resourceId: Int): List<T> {
         return try {
             val inputStream = resources.openRawResource(resourceId)
             val size = inputStream.available()

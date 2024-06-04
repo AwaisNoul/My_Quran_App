@@ -1,15 +1,13 @@
-package com.disc.myquranapp
+package com.disc.myquranapp.activitys
 
 import android.os.Bundle
-import android.util.Log
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.disc.myquranapp.R
 import com.disc.myquranapp.databinding.ActivitySurahBinding
 import com.disc.myquranapp.databinding.AyatItemviewBinding
 import com.disc.myquranapp.model.Data
 import com.disc.myquranapp.model.QuranVerse
+import com.disc.myquranapp.setData
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.IOException
