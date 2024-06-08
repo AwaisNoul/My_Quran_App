@@ -16,4 +16,8 @@ object MyExtensions {
         Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
+    fun Activity.statusBarColor(color: Int = R.color.navy) {
+        window.statusBarColor = getColor(color)
+    }
+
 }

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/navy"
+    android:background="@color/cream"
     tools:context=".fragments.QiblaFragment">
 
     <ImageView
@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Qibla Finder"
-        android:textColor="@color/white"
+        android:textColor="@color/navy"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,6 +81,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/outline_location_on_24"
+            app:tint="@color/navy"
             android:layout_marginRight="4dp"
             android:layout_marginBottom="2dp"/>
 
@@ -90,7 +91,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_medium"
             android:text="Kota Medan"
-            android:textColor="@color/white"
+            android:textColor="@color/navy"
             android:textSize="20sp" />
 
     </LinearLayout>
@@ -101,7 +102,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
         android:text="0°"
-        android:textColor="@color/white"
+        android:textColor="@color/navy"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

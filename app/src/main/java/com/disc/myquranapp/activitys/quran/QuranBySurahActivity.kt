@@ -4,9 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.disc.myquranapp.MyExtensions.statusBarColor
 import com.disc.myquranapp.R
-import com.disc.myquranapp.Utils
-import com.disc.myquranapp.activitys.SurahActivity
 import com.disc.myquranapp.databinding.ActivityQuranBySurahBinding
 import com.disc.myquranapp.databinding.SurahListItemBinding
 import com.disc.myquranapp.model.Data
@@ -26,7 +25,7 @@ class QuranBySurahActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityQuranBySurahBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        Utils.statusBarColor(this)
+        statusBarColor()
         window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)
 
         val surahList: List<Data> = parseJsonToList(R.raw.quran)

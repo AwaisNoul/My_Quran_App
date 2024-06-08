@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
+import com.disc.myquranapp.MyExtensions.statusBarColor
 import com.disc.myquranapp.databinding.ActivityMainBinding
 import com.disc.myquranapp.databinding.SurahListItemBinding
 import com.disc.myquranapp.fragments.HadisFragment
@@ -35,7 +36,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        Utils.statusBarColor(this)
+        statusBarColor()
+        Utils.systemNavigationColor(this)
 
         if (savedInstanceState == null) {
             loadFragment(QuranFragment())

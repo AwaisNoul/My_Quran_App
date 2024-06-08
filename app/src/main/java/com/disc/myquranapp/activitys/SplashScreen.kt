@@ -6,7 +6,9 @@ import android.os.Handler
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.disc.myquranapp.MainActivity
+import com.disc.myquranapp.MyExtensions.statusBarColor
 import com.disc.myquranapp.R
+import com.disc.myquranapp.Utils.hideNavigationBar
 import com.disc.myquranapp.databinding.ActivitySplashScreenBinding
 
 class SplashScreen : AppCompatActivity() {
@@ -17,8 +19,8 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        window.statusBarColor = getColor(R.color.navy)
-        window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)
+        statusBarColor(R.color.white)
+        hideNavigationBar(this)
 
 
         Handler().postDelayed({

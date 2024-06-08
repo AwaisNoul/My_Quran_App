@@ -22,7 +22,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/nav_menu"
-        android:background="#EFF4F3"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:background="@color/navy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
