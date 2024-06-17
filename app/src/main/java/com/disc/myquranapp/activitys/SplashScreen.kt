@@ -19,7 +19,7 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        statusBarColor(R.color.white)
+        statusBarColor(R.color.gray)
         hideNavigationBar(this)
 
 

@@ -1,31 +1,20 @@
 package com.disc.myquranapp
 
-import android.content.Intent
+import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import com.disc.myquranapp.MyExtensions.statusBarColor
 import com.disc.myquranapp.databinding.ActivityMainBinding
-import com.disc.myquranapp.databinding.SurahListItemBinding
 import com.disc.myquranapp.fragments.HadisFragment
 import com.disc.myquranapp.fragments.NamazFragment
 import com.disc.myquranapp.fragments.QiblaFragment
 import com.disc.myquranapp.fragments.QuranFragment
-import com.disc.myquranapp.model.Data
-import com.disc.myquranapp.model.QuranVerse
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-import java.io.IOException
-import java.nio.charset.StandardCharsets
-import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 
@@ -39,40 +28,30 @@ class MainActivity : AppCompatActivity() {
         statusBarColor()
         Utils.systemNavigationColor(this)
 
-        if (savedInstanceState == null) {
-            loadFragment(QuranFragment())
-        }
+        supportFragmentManager.beginTransaction().add(R.id.fragmentContainer, QuranFragment()).commit()
 
-        binding.bottomNav.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.tab_quran -> {
-                    loadFragment(QuranFragment())
-                    true
-                }
-                R.id.tab_hadis -> {
-                    loadFragment(HadisFragment())
-                    true
-                }
-                R.id.tab_namaz -> {
-                    loadFragment(NamazFragment())
-                    true
-                }
-                R.id.tab_qibla -> {
-                    loadFragment(QiblaFragment())
-                    true
-                }
-                else -> false
+        binding.bottomNav.setOnItemSelectedListener {
+            when (it) {
+                0 -> replaceFragment(QuranFragment())
+                1 -> replaceFragment(HadisFragment())
+                2 -> replaceFragment(NamazFragment())
+                3 -> replaceFragment(QiblaFragment())
             }
         }
 
     }
 
 
-    private fun loadFragment(fragment: Fragment) {
-        val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragment_container, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+    @SuppressLint("MissingInflatedId")
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainer, fragment)
+            .commit()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finishAffinity()
     }
 
 

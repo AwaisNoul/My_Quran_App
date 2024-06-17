@@ -12,7 +12,7 @@
     <item
         android:id="@+id/tab_namaz"
         android:icon="@drawable/ic_namaz"
-        android:title="Prayer time" />
+        android:title="Namaz" />
     <item
         android:id="@+id/tab_qibla"
         android:icon="@drawable/ic_qibla"

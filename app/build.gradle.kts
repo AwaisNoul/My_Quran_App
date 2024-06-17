@@ -66,4 +66,7 @@ dependencies {
 
     //gson
     implementation("com.google.code.gson:gson:2.10.1")
+
+    // smooth-bottom
+    implementation("com.github.ibrahimsn98:SmoothBottomBar:1.7.9")
 }

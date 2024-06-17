@@ -9,24 +9,33 @@
     tools:context=".MainActivity">
 
     <FrameLayout
-        android:id="@+id/fragment_container"
+        android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/bottom_nav"/>
+        app:layout_constraintBottom_toBottomOf="@+id/bottomNav"/>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav"
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:id="@+id/bottomNav"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_60sdp"
+        app:backgroundColor="@color/navy"
+        app:textColor="@color/white"
+        app:textSize="@dimen/_10sdp"
+        app:iconSize="@dimen/_15sdp"
+        app:indicatorColor="#2DFFFFFF"
+        app:indicatorRadius="@dimen/_5sdp"
+        app:sideMargins="@dimen/_8sdp"
+        app:itemPadding="@dimen/_8sdp"
+        app:iconTint="#C8FFFFFF"
+        app:iconTintActive="#FFFFFF"
+        app:cornerRadius="@dimen/_10sdp"
+        app:corners="top_left|top_right"
         app:menu="@menu/nav_menu"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        android:background="@color/navy"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

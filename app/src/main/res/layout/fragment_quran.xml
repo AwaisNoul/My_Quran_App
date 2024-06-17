@@ -63,13 +63,13 @@
             android:layout_height="@dimen/_100sdp"
             android:layout_weight="1"
             app:cardElevation="@dimen/_5sdp"
-            app:strokeColor="@color/green"
+            app:strokeColor="@color/gray"
             app:strokeWidth="@dimen/_1sdp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/green"
+                android:background="@color/gray"
                 android:orientation="vertical">
 
                 <ImageView
@@ -105,13 +105,13 @@
             android:layout_height="@dimen/_100sdp"
             android:layout_weight="1"
             app:cardElevation="@dimen/_5sdp"
-            app:strokeColor="@color/green"
+            app:strokeColor="@color/gray"
             app:strokeWidth="@dimen/_1sdp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/green"
+                android:background="@color/gray"
                 android:orientation="vertical">
 
                 <ImageView
